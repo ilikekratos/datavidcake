@@ -1,0 +1,39 @@
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: datavidcake
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  nodeapp:
+    build:      
+      context: ./back-end
+      dockerfile: Dockerfile.node
+    environment:
+      DATABASE_HOST: postgres  
+      DATABASE_PORT: 5432    
+      DATABASE_USER: postgres 
+      DATABASE_PASSWORD: postgres 
+      DATABASE_NAME: datavidcake 
+    ports:
+      - "3000:3000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  reactapp:
+    build:
+      context: ./front-end 
+      dockerfile: Dockerfile.react
+    ports:
+      - "4000:4000" 
+    depends_on:
+      - nodeapp  
