@@ -1,0 +1,133 @@
+.employee-list-container {
+    width: 40%;
+    margin: auto;
+    margin-top: 2%;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    color: #233d7a;
+    text-align: center;
+  }
+  
+  .sort-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .sort-container label {
+    margin-right: 10px;
+    color: #333;
+  }
+  
+  .sort-container select {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  .sort-container select:focus {
+    border-color: #233d7a;
+    box-shadow: 0 0 5px rgba(35, 61, 122, 0.5);
+  }
+  
+  .list-container {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .employee-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%;
+    margin-bottom: 1%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+  }
+  .employee-name {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .employee-details {
+    color: #666;
+    margin-left: 10px;
+  }
+  
+  .delete-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 1.5%;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .delete-button:hover {
+    background-color: #d32f2f;
+  }
+  .employee-details-container {
+    display: flex;
+    align-items: center; /* Ensure items are vertically aligned */
+    width: 65%;
+  }
+  
+  .birthday-icon {
+    height: 35px; /* Maintain aspect ratio */
+    margin-left: auto; /* Space between birthdate and icon */
+  }
+  .employee-name,
+
+.employee-details {
+  text-transform: capitalize;
+}
+.snackbar {
+    position: fixed;
+    bottom: -50px; /* Start off-screen */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, bottom 0.5s ease-in-out;
+  }
+  
+  
+  .snackbar.show {
+    opacity: 1;
+    bottom: 30px; /* Move to visible position */
+  }
+  
+
+
+  .snackbar.hide {
+    opacity: 0;
+    bottom: -50px; /* Move off-screen */
+  }
+.snackbar.success {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .snackbar.fail {
+    background-color: #f44336;
+    color: white;
+  }

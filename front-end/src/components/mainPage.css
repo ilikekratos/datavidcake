@@ -1,0 +1,39 @@
+
+.main-page {
+    width: 100%;
+    height: 100%;
+  }
+  
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .navbar {
+    background-color: #233d7a;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center; /* Center items horizontally with equal spacing */
+    align-items: center; /* Center items vertically */
+  }
+  
+  .navbar button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2.5em;
+    cursor: pointer;
+    margin: 0 4%;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar button:hover {
+    color: #45c4d8;
+  }
+  
+  main {
+    height: 100%;
+    width: 100%;
+  }
