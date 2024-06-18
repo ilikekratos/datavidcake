@@ -10,15 +10,3 @@ backend/coverage/
 
 # Ignore dependency directories
 node_modules/
-
-
-# Ignore OS generated files
-.DS_Store
-Thumbs.db
-
-# Ignore build output
-dist/
-build/
-coverage/
-tmp/
-temp/
